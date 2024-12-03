@@ -62,4 +62,19 @@ class TMDbService {
       throw Exception('Dizi detaylarını getirirken hata oluştu: ${response.statusCode}');
     }
   }
+
+  Future<List<dynamic>> searchContent(String query) async {
+    final url = Uri.parse(
+        '$baseUrl/search/multi?api_key=$apiKey&language=tr-TR&query=$query');
+    final response = await http.get(url);
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return data['results'] ?? [];
+    } else {
+      throw Exception('Arama sırasında hata oluştu: ${response.statusCode}');
+    }
+  }
+
+
 }

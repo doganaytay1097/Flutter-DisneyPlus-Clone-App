@@ -30,8 +30,8 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // Tip ayarlandı
-        backgroundColor: Color(0xff142850), // Renk burada açıkça belirtiliyor
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0xff142850),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
