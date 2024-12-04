@@ -31,12 +31,12 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xff142850),
+        backgroundColor: const Color(0xff142850),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: '',
