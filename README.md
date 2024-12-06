@@ -37,21 +37,24 @@ Bu proje, Flutter kullanarak Disney+ uygulamasının bir klonunu oluşturan bir 
 🛠️ Kurulum
 Projeyi klonlayın:
 
-bash
 Kodu kopyala
+
 git clone https://github.com/doganaytay1097/disney_plus_clone.git
+
 cd disney_plus_clone
+
 Bağımlılıkları yükleyin:
 
-bash
 Kodu kopyala
+
 flutter pub get
+
 TMDb API Anahtarını Ekleyin: tmdb_service.dart dosyasındaki apiKey değişkenine kendi TMDb API anahtarınızı ekleyin.
 
 Uygulamayı çalıştırın:
 
-bash
 Kodu kopyala
+
 flutter run
 
 ## 📂 Proje Yapısı
