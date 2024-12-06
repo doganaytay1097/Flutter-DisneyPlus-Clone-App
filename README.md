@@ -33,25 +33,6 @@ Bu proje, Flutter kullanarak Disney+ uygulamasının bir klonunu oluşturan bir 
 - **carousel_slider**: Karusel bileşeni için.
 - **animated_splash_screen**: Açılış animasyonu için.
 
-## 📂 Proje Yapısı
-
-```plaintext
-lib/
-├── main.dart                # Ana uygulama dosyası
-├── screens/                 # Uygulama ekranları
-│   ├── home_screen.dart     # Ana ekran
-│   ├── main_screen.dart     # Navigation Bar ekranı
-│   ├── search_screen.dart   # Arama ekranı
-│   ├── details_screen.dart  # Film/Dizi detay ekranı
-│   ├── profile_screen.dart  # Profil ekranı
-│   ├── profile_selection_screen.dart  # Profil seçimi ekranı
-│   └── downloads_screen.dart  # İndirilenler ekranı
-├── services/                # API servisleri
-│   └── tmdb_service.dart    # TMDb API servisi
-├── assets/                  # Proje varlıkları
-│   ├── animations/          # Lottie animasyon dosyaları
-│   ├── images/              # Görseller
-│   └── audio/               # Ses dosyaları
 
 🛠️ Kurulum
 Projeyi klonlayın:
@@ -72,3 +53,25 @@ Uygulamayı çalıştırın:
 bash
 Kodu kopyala
 flutter run
+
+## 📂 Proje Yapısı
+
+```plaintext
+lib/
+├── main.dart                # Ana uygulama dosyası
+├── screens/                 # Uygulama ekranları
+│   ├── home_screen.dart     # Ana ekran
+│   ├── main_screen.dart     # Navigation Bar ekranı
+│   ├── search_screen.dart   # Arama ekranı
+│   ├── details_screen.dart  # Film/Dizi detay ekranı
+│   ├── profile_screen.dart  # Profil ekranı
+│   ├── profile_selection_screen.dart  # Profil seçimi ekranı
+│   └── downloads_screen.dart  # İndirilenler ekranı
+├── services/                # API servisleri
+│   └── tmdb_service.dart    # TMDb API servisi
+├── assets/                  # Proje varlıkları
+│   ├── animations/          # Lottie animasyon dosyaları
+│   ├── images/              # Görseller
+│   └── audio/               # Ses dosyaları
+
+
