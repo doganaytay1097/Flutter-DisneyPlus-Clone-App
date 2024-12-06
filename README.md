@@ -6,11 +6,11 @@ Bu proje, Flutter kullanarak Disney+ uygulamasının bir klonunu oluşturan bir 
 
 | Açılış Ekranı                 | Ana Ekran                     | Arama Ekranı                  |
 |-------------------------------|-------------------------------|-------------------------------|
-| ![Açılış Ekranı](assets/screenshots/splash_screen.png) | ![Ana Ekran](assets/screenshots/home_screen.png) | ![Arama Ekranı](assets/screenshots/search_screen.png) |
+| ![Açılış Ekranı](disney_plus/assets/screenshots/splash_screen.png) | ![Ana Ekran](disney_plus/assets/screenshots/home_screen.png) | ![Arama Ekranı](disney_plus/assets/screenshots/search_screen.png) |
 
 | Film Detay Ekranı             | Profil Seçim Ekranı           |
 |-------------------------------|-------------------------------|
-| ![Film Detay](assets/screenshots/details_screen.png) | ![Profil Seçim](assets/screenshots/profile_selection_screen.png) |
+| ![Film Detay](disney_plus/assets/screenshots/details_screen.png) | ![Profil Seçim](disney_plus/assets/screenshots/profile_selection_screen.png) |
 
 ## 🚀 Özellikler
 
@@ -33,6 +33,30 @@ Bu proje, Flutter kullanarak Disney+ uygulamasının bir klonunu oluşturan bir 
 - **carousel_slider**: Karusel bileşeni için.
 - **animated_splash_screen**: Açılış animasyonu için.
 
+
+🛠️ Kurulum
+Projeyi klonlayın:
+
+Kodu kopyala
+
+git clone https://github.com/doganaytay1097/disney_plus_clone.git
+
+cd disney_plus_clone
+
+Bağımlılıkları yükleyin:
+
+Kodu kopyala
+
+flutter pub get
+
+TMDb API Anahtarını Ekleyin: tmdb_service.dart dosyasındaki apiKey değişkenine kendi TMDb API anahtarınızı ekleyin.
+
+Uygulamayı çalıştırın:
+
+Kodu kopyala
+
+flutter run
+
 ## 📂 Proje Yapısı
 
 ```plaintext
@@ -52,3 +76,5 @@ lib/
 │   ├── animations/          # Lottie animasyon dosyaları
 │   ├── images/              # Görseller
 │   └── audio/               # Ses dosyaları
+
+
