@@ -14,6 +14,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
   final TMDbService tmdbService = TMDbService();
   Map<String, dynamic>? details;
   bool isLoading = true;
+  bool isMovie = true;
 
   @override
   void initState() {
@@ -24,7 +25,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
   void fetchDetails() async {
     try {
       final id = widget.movie['id'];
-      final isMovie = widget.movie.containsKey('release_date');
+      isMovie = widget.movie.containsKey('release_date');
       details = isMovie
           ? await tmdbService.fetchMovieDetails(id)
           : await tmdbService.fetchTVDetails(id);
@@ -88,11 +89,19 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 Positioned(
                   top: 40,
                   left: 16,
-                  child: IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.white),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+                  child: Container(
+                    width: 33,
+                    height: 33,
+                    decoration: BoxDecoration(
+                      color: Colors.black38,
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back_ios_sharp, color: Colors.white,size: 15,),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   ),
                 ),
                 Positioned(
@@ -177,7 +186,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   ),
                   SizedBox(height: 16),
                   DefaultTabController(
-                    length: 3,
+                    length: isMovie ? 3 : 4,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -186,21 +195,24 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           unselectedLabelColor: Colors.grey,
                           indicatorColor: Color(0xFF113CCF),
                           tabs: [
-                            Tab(text: 'Bölümler'),
+                            if (!isMovie) Tab(text: 'Bölümler'),
                             Tab(text: 'Öneriler'),
                             Tab(text: 'Ekstralar'),
+                            Tab(text: 'Ayrıntılar',)
                           ],
                         ),
                         SizedBox(
                           height: 200,
                           child: TabBarView(
                             children: [
-                              Center(
-                                child: Text(
-                                  '1. Sezon Bölümleri',
-                                  style: TextStyle(color: Colors.white),
+                              if (!isMovie)
+                                Center(
+                                  child: Text(
+                                    '1. Sezon Bölümleri',
+                                    style:
+                                    TextStyle(color: Colors.white),
+                                  ),
                                 ),
-                              ),
                               Center(
                                 child: Text(
                                   'Önerilen İçerikler',
@@ -210,6 +222,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               Center(
                                 child: Text(
                                   'Ekstra Videolar',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  isMovie ? 'Filmin Ayrıntıları' : 'Dizinin Ayrıntıları',
+
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),

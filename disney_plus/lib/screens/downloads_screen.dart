@@ -5,6 +5,7 @@ class DownloadsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           'İndirmeler',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profile_selection_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   final List<Map<String, String>> profiles = [
@@ -21,6 +22,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('Profil'),
         backgroundColor: Color(0xff142850),
         elevation: 0,
@@ -82,7 +84,14 @@ class ProfileScreen extends StatelessWidget {
                     settings[index],
                     style: TextStyle(color: Colors.white),
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    if (settings[index] == 'Oturumu Kapat') {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfileSelectionScreen()),
+                      );
+                    }
+                  },
                 );
               },
             ),

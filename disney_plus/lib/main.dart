@@ -1,6 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:disney_plus/screens/main_screen.dart';
+import 'package:disney_plus/screens/profile_selection_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -25,7 +25,7 @@ class DisneyPlusClone extends StatelessWidget {
       ),
       home: AnimatedSplashScreen(
         splash: Lottie.asset('assets/animations/disney.json'),
-        nextScreen: MainScreen(),
+        nextScreen: ProfileSelectionScreen(),
         duration: 4300,
         splashIconSize: 500,
         backgroundColor: Color(0xff142850),
