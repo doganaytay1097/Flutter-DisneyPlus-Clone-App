@@ -201,6 +201,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             buildCarousel(popularMovies),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buildcategory('assets/images/disneykare.png',20,Colors.white),
+                buildcategory('assets/images/pixarkare.png',35,Colors.white),
+                buildcategory('assets/images/marvelkare.png',20,null),
+                buildcategory('assets/images/starwarskare.png',45,Colors.white),
+                buildcategory('assets/images/nationalkare.png',55,Colors.white),
+              ],
+            ),
             buildHorizontalList('Disney+’ta Yeni', popularMovies),
             buildHorizontalList('Popüler Diziler', popularTVShows),
             buildHorizontalList('En Çok Oy Alan Filmler', topRatedMovies),
@@ -209,4 +219,32 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+
+  Widget buildcategory(String imagePath, double height, Color? color) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15),
+      child: Container(
+        width: 60,
+        height: 55,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+          color: Colors.grey[800],
+        ),
+        child: Center(
+          child: color != null
+              ? Image.asset(
+            imagePath,
+            height: height,
+            color: color,
+          )
+              : Image.asset(
+            imagePath,
+            height: height,
+          ),
+        ),
+      ),
+    );
+  }
+
 }
