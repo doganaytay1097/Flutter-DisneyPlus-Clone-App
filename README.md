@@ -5,9 +5,9 @@ Bu proje, Flutter kullanarak Disney+ uygulamasının bir klonunu oluşturan bir 
 ## 📱 Ekran Görüntüleri
 Ekran görüntülerinizi buraya eklemek için aşağıdaki yapıyı kullanabilirsiniz:
 
-| Ana Ekran                     | Arama Ekranı                  | Profil Seçim Ekranı          |
+| Açılış Ekranı                     | Ana Ekran                     | Arama Ekranı                  | Film Detay Ekranı          | Profil Seçim Ekranı                   |
 |-------------------------------|-------------------------------|------------------------------|
-| ![Ana Ekran](assets/screenshots/home_screen.png) | ![Arama Ekranı](assets/screenshots/search_screen.png) | ![Profil Seçim](assets/screenshots/profile_selection.png) |
+| ![Açılış Ekranı](assets/screenshots/home_screen.png) | ![Ana Ekran](assets/screenshots/home_screen.png) | ![Arama Ekranı](assets/screenshots/search_screen.png) | ![Film Detay](assets/screenshots/detail_secreen.png) | ![Profil Seçim](assets/screenshots/profile_selection.png) |
 
 ## 🚀 Özellikler
 
